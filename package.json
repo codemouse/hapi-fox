@@ -1,6 +1,6 @@
 {
   "name": "hapi-fox",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A testing ground for Hapi server best practices and interesting ideas.",
   "repository": {
     "type": "git",

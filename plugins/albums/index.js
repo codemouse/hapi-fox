@@ -12,7 +12,13 @@ exports.register = (server, options, next) => {
       'validate': models.create.validate,
       'response': models.create.response,
       'tags': ['api'],
-      'plugins': {'hapiAuthorization': {roles: [server.role.ADMIN.name]}}
+      'plugins': {
+        'hapiAuthorization': {
+          'roles': [
+            server.role.ADMIN.name
+          ]
+        }
+      }
     }
   });
 
@@ -23,7 +29,14 @@ exports.register = (server, options, next) => {
     'config':{
       'response': models.find.response,
       'tags': ['api'],
-      'plugins': {'hapiAuthorization': {roles: [server.role.ADMIN.name, server.role.USER.name]}}
+      'plugins': {
+        'hapiAuthorization': {
+          'roles': [
+            server.role.ADMIN.name,
+            server.role.USER.name
+          ]
+        }
+      }
     }
   });
 
@@ -35,7 +48,14 @@ exports.register = (server, options, next) => {
       'validate': models.findOne.validate,
       'response': models.findOne.response,
       'tags': ['api'],
-      'plugins': {'hapiAuthorization': {roles: [server.role.ADMIN.name, server.role.USER.name]}}
+      'plugins': {
+        'hapiAuthorization': {
+          'roles': [
+            server.role.ADMIN.name,
+            server.role.USER.name
+          ]
+        }
+      }
     }
   });
 
