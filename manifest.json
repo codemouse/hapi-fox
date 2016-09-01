@@ -7,6 +7,11 @@
   "registrations": [
     {
       "plugin": {
+        "register": "./plugins/roles"
+      }
+    },
+    {
+      "plugin": {
         "register": "./plugins/users"
       }
     },

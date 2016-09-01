@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "bcrypt": "^0.8.7",
+    "enumify": "^1.0.4",
     "hapi": "^15.0.3",
     "hapi-auth-basic": "^4.2.0",
     "hapi-authorization": "^3.0.2",
