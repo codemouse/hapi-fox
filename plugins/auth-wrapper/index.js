@@ -4,9 +4,7 @@ const Bcrypt = require('bcrypt');
 const BasicAuth = require('hapi-auth-basic');
 
 exports.register = (server, options, next) => {
-
   const basicValidation = (request, username, password, callback) => {
-    console.log(server)
     const user = server.users[username];
 
     if (!user) {
@@ -20,7 +18,9 @@ exports.register = (server, options, next) => {
 
   server.register(BasicAuth);
   server.auth.strategy('simple', 'basic', { validateFunc: basicValidation });
+
   server.auth.default('simple');
+
   next()
 };
 
