@@ -2,6 +2,10 @@
   "name": "hapi-fox",
   "version": "1.0.0",
   "description": "A testing ground for Hapi server best practices and interesting ideas.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/codemouse/hapi-fox.git"
+  },
   "dependencies": {
     "bcrypt": "^0.8.7",
     "hapi": "^15.0.3",
