@@ -1,0 +1,85 @@
+{
+  "connections": [
+    {
+      "port": 3000
+    }
+  ],
+  "registrations": [
+    {
+      "plugin": {
+        "register": "./plugins/users"
+      }
+    },
+    {
+      "plugin": {
+        "register": "./plugins/auth-wrapper"
+      }
+    },
+    {
+      "plugin": {
+        "register": "hapi-authorization",
+        "options": {
+          "roles": ["ADMIN", "USER"]
+        }
+      }
+    },
+    {
+      "plugin": {
+        "register": "inert"
+      }
+    },
+    {
+      "plugin": {
+        "register": "vision"
+      }
+    },
+    {
+      "plugin": {
+        "register": "hapi-swagger"
+      }
+    },
+    {
+      "plugin": {
+        "register": "./plugins/albums"
+      }
+    },
+    {
+      "plugin": {
+        "register": "blipp",
+        "options": {
+          "showAuth": true
+        }
+      }
+    },
+    {
+      "plugin": {
+        "register": "good",
+        "options": {
+          "ops": {
+            "interval": 1000
+          },
+          "reporters": {
+            "myConsoleReporter": [{
+              "module": "good-squeeze",
+              "name": "Squeeze",
+              "args": [{"log": "*", "response": "*"}]
+            }, {
+              "module": "good-console"
+            }, "stdout"]
+          }
+        }
+      }
+    },
+    {
+      "plugin": {
+        "register": "hapi-plugin-mysql",
+        "options": {
+          "host": "localhost",
+          "user": "root",
+          "password": "password",
+          "database": "fox"
+        }
+      }
+    }
+  ]
+}

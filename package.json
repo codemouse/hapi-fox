@@ -1,0 +1,29 @@
+{
+  "name": "hapi-fox",
+  "version": "1.0.0",
+  "description": "A testing ground for Hapi server best practices and interesting ideas.",
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "hapi": "^15.0.3",
+    "hapi-auth-basic": "^4.2.0",
+    "hapi-authorization": "^3.0.2",
+    "hapi-plugin-mysql": "^3.2.1",
+    "hapi-swagger": "^7.1.0",
+    "inert": "^4.0.2",
+    "node-uuid": "^1.4.7",
+    "rejoice": "^3.3.1",
+    "squel": "^5.4.2",
+    "vision": "^4.1.0"
+  },
+  "devDependencies": {
+    "blipp": "^2.3.0",
+    "good": "^7.0.2",
+    "good-console": "^6.1.2",
+    "good-squeeze": "^4.0.0"
+  },
+  "scripts": {
+    "start": "./node_modules/rejoice/bin/rejoice -c manifest.json -p ./"
+  },
+  "author": "Brian Sodano",
+  "license": "MIT"
+}
