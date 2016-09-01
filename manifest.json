@@ -22,10 +22,7 @@
     },
     {
       "plugin": {
-        "register": "hapi-authorization",
-        "options": {
-          "roles": ["ADMIN", "USER"]
-        }
+        "register": "./plugins/role-wrapper"
       }
     },
     {

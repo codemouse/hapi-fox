@@ -12,11 +12,10 @@ exports.register = (server, options, next) => {
     }
 
     Bcrypt.compare(password, user.password, function (err, isValid) {
-      console.log(user.role)
       callback(err, isValid, {
         'id': user.id,
         'username': user.username,
-        'role': user.role.name
+        'role': user.role
       })
     })
   };
